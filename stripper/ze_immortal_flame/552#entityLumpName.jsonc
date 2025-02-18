@@ -1,0 +1,18 @@
+/**
+ *  ZE IMMORTAL FLAME STRIPPER
+ *  CREATED BY: Beppu (STEAM_1:1:454921932)
+ */
+{
+  /* Makes final purple lasers instantly kill humans */
+  "modify": [
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]laser_end_hurt&0000"
+      },
+      "replace": {
+        "damage": "1000"
+      }
+    }
+  ]
+}
