@@ -55,5 +55,28 @@
         }
       ]
     }
+  ],
+  /* Adds 2 unused laser patterns */
+  "modify": [
+    {
+      "match": {
+        "classname": "logic_case",
+        "targetname": "[PR#]laser_case"
+      },
+      "insert": {
+        "io": [
+          {
+            "outputname": "OnCase17",
+            "targetname": "laser7",
+            "inputname": "ForceSpawn"
+          },
+          {
+            "outputname": "OnCase18",
+            "targetname": "laser18",
+            "inputname": "ForceSpawn"
+          }
+        ]
+      }
+    }
   ]
 }
