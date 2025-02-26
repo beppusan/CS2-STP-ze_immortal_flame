@@ -55,5 +55,23 @@
         }
       ]
     }
+  ],
+  
+  // Fix typo in the command parameter to properly display the message
+  "modify": [
+    {
+      "match": {
+        "io": [
+          {
+            "overrideparam": "sat Pure hearts can never"
+          }
+        ]
+      },
+      "replace": {
+        "io": {
+          "overrideparam": "say Pure hearts can never"
+        }
+      }
+    }
   ]
 }
