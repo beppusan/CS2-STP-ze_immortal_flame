@@ -1,0 +1,59 @@
+/**
+ *  ZE IMMORTAL FLAME STRIPPER
+ *  CREATED BY: Beppu (STEAM_1:1:454921932)
+ */
+{
+  // Adjust player health upon entering a minigame part
+  "modify": [
+    {
+      "match": {
+        "classname": "trigger_multiple",
+        "hammeruniqueid": "632"
+      },
+      "delete": {
+        "io": [
+          {
+            "overrideparam": "max_health 300"
+          },
+          {
+            "overrideparam": "health 300"
+          }
+        ]
+      },
+      "insert": {
+        "io": [
+          {
+            "outputname": "OnStartTouch",
+            "targetname": "!activator",
+            "inputname": "KeyValue",
+            "overrideparam": "max_health 200"
+          },
+          {
+            "outputname": "OnStartTouch",
+            "targetname": "!activator",
+            "inputname": "KeyValue",
+            "overrideparam": "health 200"
+          }
+        ]
+      }
+    }
+  ],
+
+  // Add a timer to block the healthshot weapon
+  "add": [
+    {
+      "classname": "logic_timer",
+      "spawnflags": "0",
+      "startdisabled": "0",
+      "refiretime": "0.01",
+      "origin": "5664 1312 1152",
+      "io": [
+        {
+          "outputname": "OnTimer",
+          "targetname": "weapon_healthshot",
+          "inputname": "Kill"
+        }
+      ]
+    }
+  ]
+}

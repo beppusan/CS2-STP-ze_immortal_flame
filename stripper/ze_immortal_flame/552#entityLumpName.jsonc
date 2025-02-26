@@ -1,0 +1,18 @@
+/**
+ *  ZE IMMORTAL FLAME STRIPPER
+ *  CREATED BY: Beppu (STEAM_1:1:454921932)
+ */
+{
+  // Replace damage amount to ensure players are instantly killed
+  "modify": [
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]laser_end_hurt&0000"
+      },
+      "replace": {
+        "damage": "1000"
+      }
+    }
+  ]
+}
